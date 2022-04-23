@@ -5,7 +5,6 @@ const massResult = document.querySelector('.mass-result')
 
 value.addEventListener('input', generateResults)
 
-
 // Function: Generate metric/imperial conversion results
 function generateResults() {
     let value = document.getElementById('value').value
