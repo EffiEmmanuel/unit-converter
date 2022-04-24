@@ -10,6 +10,23 @@ function generateResults() {
     let value = document.getElementById('value').value
 
     if(value == '') value = 0
+    if(isNaN(value)) {
+        value = 0
+
+        // Create error node
+        let errors = document.querySelector('.errors')
+        let error = document.createElement('small')
+        error.textContent = 'Invalid Value!'
+        error.setAttribute('id', 'error')
+
+        // Add error node to the .error div
+        errors.appendChild(error)
+
+        // Delete node after 3 seconds
+        setTimeout(()=> {
+            error.remove()
+        }, 3000);
+    }
 
     let length = toLength(value)
     let volume = toVolume(value)
