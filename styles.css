@@ -57,3 +57,41 @@ main {
 .result p:last-child {
     color: #4e4e4e;
 }
+
+.errors {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+#error {
+    background-color: #ed4337;
+    color: white;
+    padding: 20px 30px;
+    animation: showMessage 3s ease-in-out forwards;
+    margin-bottom: 10px;
+}
+
+@keyframes showMessage {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    20% {
+        display: block;
+        opacity: 1;
+    }
+
+    80% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
